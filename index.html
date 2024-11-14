@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect App</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2196F3">
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: #736969;
+      }
+      .loading-icon {
+        display: none;
+        width: 50vw;
+        /* height: 30vw */
+      }
+    </style>
+  </head>
+
+  <body>
+    <img src="icons/icon07_x512.png" alt="Loading Icon" class="loading-icon">
+    <script>
+      document.querySelector('.loading-icon').style.display = 'block';
+      setTimeout(function () {
+        document.querySelector('.loading-icon').style.display = 'none';
+        window.location.href = "https://gmaterni.github.io/ipotesi/ipotesi.html"
+      }, 5000);
+    </script>
+  </body>
+
+</html>
