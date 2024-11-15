@@ -5,7 +5,7 @@
   "display": "standalone",
   "orientation": "any",
   "theme_color": "#050e84",
-  "background_color": "#044b47",
+  "background_color": "##736969",
   "icons": [
     {
       "src": "icons/icon07_x512.png",
@@ -46,7 +46,7 @@
       "src": "imgs/giardino800x480.jpg",
       "sizes": "800x480",
       "type": "image/jpg",
-      "description": "giardino viterbo"
+      "description": "giardino"
     }
   ]
 }

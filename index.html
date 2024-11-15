@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirect App</title>
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#2196F3">
+    <meta name="theme-color" content="#736969">
     <style>
       body {
         display: flex;
@@ -14,12 +14,19 @@
         align-items: center;
         height: 100vh;
         margin: 0;
+        padding: 0;
         background: #736969;
       }
+
       .loading-icon {
-        display: none;
-        width: 50vw;
-        /* height: 30vw */
+        width: 90vw;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+
+      .loading-icon:hover {
+        transform: scale(1.05);
+        /* Leggero effetto di ingrandimento al passaggio del mouse */
       }
     </style>
   </head>
@@ -27,12 +34,18 @@
   <body>
     <img src="icons/icon07_x512.png" alt="Loading Icon" class="loading-icon">
     <script>
-      document.querySelector('.loading-icon').style.display = 'block';
-      setTimeout(function () {
-        document.querySelector('.loading-icon').style.display = 'none';
-        window.location.href = "https://gmaterni.github.io/ipotesi/ipotesi.html"
-      }, 1000);
+      const icon = document.querySelector('.loading-icon');
+      function handleRedirect() {
+        icon.style.opacity = '0.5'; // Feedback visivo del click
+        setTimeout(() => {
+          window.location.href = "https://gmaterni.github.io/ipotesi/ipotesi.html";
+        }, 300);
+      }
+      icon.addEventListener('click', handleRedirect);
+      icon.addEventListener('touchstart', (e) => {
+        e.preventDefault(); 
+        handleRedirect();
+      });
     </script>
   </body>
-
 </html>
