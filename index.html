@@ -38,14 +38,16 @@
       function handleRedirect() {
         icon.style.opacity = '0.5'; // Feedback visivo del click
         setTimeout(() => {
-          window.location.href = "https://gmaterni.github.io/ipotesi/ipotesi.html";
+          // window.location.href = "https://gmaterni.github.io/ipotesi/ipotesi.html";}, 300);
+          window.location.href = "https://www.ipotesi.eu/";
         }, 300);
       }
       icon.addEventListener('click', handleRedirect);
       icon.addEventListener('touchstart', (e) => {
-        e.preventDefault(); 
+        e.preventDefault();
         handleRedirect();
       });
     </script>
   </body>
+
 </html>
